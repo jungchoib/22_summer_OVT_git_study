@@ -1,0 +1,27 @@
+Git을 활용한 저장소들을 만들어놓은곳이 Github
+
+CLI(Command Line Interface), GUI  우리는 CLI로 원리부터 이해하기
+
+CLI사용법
+  1. git CLI설치
+  2. git --version 으로 깔렸나 확인
+  3. git config user.name 이름
+     git config user.email 이메일  두개를 친 후
+     git config --list로 잘 들어갔나 확인하기
+  4. Github에서 새 repository를 만든다.
+  5. git 명령어 활용 (add, commit, push)
+    -1. 폴더 하나 만든다 mkdir Git_study
+    -2. cd Git_study 로 폴더 속으로 이동한 후 git init명령어(Git_study폴더를 로컬저장소로 설정한다.)
+    -3. git init을 실행한 후 Git_study(main) 이렇게 뜨는데 이때 main은 branch 이름이다.
+    -4. 이제 파일을 remote repository에 올려보자. 올릴 파일 만들기 echo "Hello Github!" >> README.md (repo의 간단설명을 내용으로 가지느 파일)
+    -5. 만든 후 git status 로 로컬저장소의 파일변화상태 보여줌
+    -6. git add README.md 명령어로 파일추적을 시작한다.
+      로컬 저장소(내 컴퓨터) - (add) > staging area(파일추적=add한 파일들 가는곳, 기록은 아직 안됨) - (commit) > LOCAL Repository - (push) > remote Repository(협업용 수정 가능)
+    -7. git commit -m "staging area에서 찍을 스냅샷 이름" 으로 LOCAL Repository commit한다.
+        git show 명령어로 스냅샷의 정보를 확인 할 수 있다.
+    -8. remote Repository (Github의 Repository)로 옮기기
+        git remote add origin 주소    명령어로 remote Repository주소를 연결하기
+        git push origin main(브랜치 이름)  명령어로 remote Repository로 스냅샷 옮기기 성공
+    -9. 이번엔 반대로 remote Repository(github)에서 아무런 파일을 만든후에 그것을 LOCAL Repository로 옮기려면
+        git pull origin main 명령어로 LOCAL repository를 바뀐 remote repository에 동기화를 시킨다.
+        이때 pull은 동기화 까지, merge는 local repo로 스냅샷 갖고오기까지마 한다.
