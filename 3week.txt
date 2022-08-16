@@ -15,3 +15,8 @@ branch 만들고 main branch로 merge하기
         git remote add origin 주소    명령어로 remote Repository주소를 연결하기
         git push origin main(브랜치 이름)  명령어로 remote Repository로 스냅샷 옮기기 성공
   추가로 (git checkout)으로 HEAD가 바뀔때 마다 Finder등으로 파일을 보면 새파일을 만든 branch일때와 변경한것이 없는 main branch일때 파일의 갯수가 달라진것을 확인할 수 있다.
+2. merge하기
+  github에서 pull request탭으로 이동 후 new pull request누르기
+  base 와 <- compare 을 정한 후에 pull request누르면 merge할 준비가 되고
+  merge pull request 누른 후 confirm merge 누르면 되고
+  delete branch 누르면 compare 한 branch(main이 아닌)가 삭제된다.
