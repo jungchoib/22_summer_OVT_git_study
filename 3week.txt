@@ -1,1 +1,16 @@
-3week Git study
+branch 만들고 main branch로 merge하기
+
+1. new branch 만들기
+  git checkout -b 브랜치이름   (checkout은 HEAD(보는곳)를 옮기는것,   -b는 새로운 branch 생성)
+  git branch 로 현재 HEAD가 가리키는 branch를 알려줌
+    
+    실습을 위한 새 파일 만들어 올리기는 밑의 1,2주차 참고
+    1 이제 파일을 remote repository에 올려보자. 올릴 파일 만들기 echo "Hello Github!" >> README.md (repo의 간단설명을 내용으로 가지느 파일)
+    2 만든 후 git status 로 로컬저장소의 파일변화상태 보여줌
+    3 git add README.md 명령어로 파일추적을 시작한다.
+      로컬 저장소(내 컴퓨터) - (add) > staging area(파일추적=add한 파일들 가는곳, 기록은 아직 안됨) -(commit)> LOCAL Repository - (push) > remote Repository(협업용 수정 가능)
+    4 git commit -m "staging area에서 찍을 스냅샷 이름" 으로 LOCAL Repository commit한다.
+        git show 명령어로 스냅샷의 정보를 확인 할 수 있다.
+    5 remote Repository (Github의 Repository)로 옮기기
+        git remote add origin 주소    명령어로 remote Repository주소를 연결하기
+        git push origin main(브랜치 이름)  명령어로 remote Repository로 스냅샷 옮기기 성공
